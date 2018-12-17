@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Effects on voice and music  </title>
+    <link href='inputfile.css' rel='stylesheet'>
+</head>
+
+<style>
+    input.volume {
+        width: 120px;
+        height: 10px;
+    }
+</style>
+
+<body>
+    <div class="container" style="text-align:center;">
+        <h1 style="text-align: center"> Guitar Effects</h1>
+        <br />
+        <p>You can use your own voice, or choose a music file from your desktop.</p>
+        <br />
+        <button id="micInput"> Mic On </button>
+        <br />
+        <p id="fileAudio">File Audio Stopped.</p>
+        <p style="text-align: left">Unfixed Bugs</p>
+        <p style="text-align: left">(1) You need to click 'Play' 3 times to play your music.</p>
+        <p style="text-align: left">(2) Turn off your mic manually once you want to play your music without your voice after using mic as a sound source.</p>
+        <p style="text-align: left">(3) If something doesn't work as you expect, refresh the browser.</p>
+        <br />
+        <div class="filebox bs3-primary preview-image">
+            <input class="upload-name" value="Choose your File" disabled="disabled" style="width: 200px;" id="fileName">
+            <label for="fileChooseInput">Upload</label>
+            <input id="fileChooseInput" type="file" class="upload-hidden" />
+            <button class="btn btn-success" onclick="playFile(myAudioBuffer)">Play</button>
+            <button class="btn btn-danger" onclick="turnOffFileAudio()">Stop</button>
+            <p id="tone_labl">Tone</p>
+            <input class="volume" id="tone" title="LPF freq" type="range" min="0" max="60" value="10">
+            <p id="dist_labl">DIstortion</p>
+            <input class="volume" id="dist" title="Distortion" type="range" min="0" max="20" value="0">
+            <p id="gain_labl">Gain</p>
+            <input class="volume" id="gain" title="Gain" type="range" min="-48" max="0" value="-12">
+</body>
+
+<script type="text/javascript" src="final1.js"></script>
+</html>
